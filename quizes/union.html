@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Union Quiz</title>
+    <link rel="shortcut  icon" href="../quiz.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+      }
+      h1 {
+        text-align: center;
+        font-family: 'Merienda', cursive;
+        text-shadow: 2px 2px 5px;
+      }
+      .question {
+        margin-top: 7rem;
+        overflow: hidden;
+        display: flex;
+        font-family: 'Merienda', cursive;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+
+        border: 2px solid black;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      p {
+        font-size: 1.5rem;
+        color: #484848;
+      }
+
+      .options p {
+        border-top: 2px solid black;
+        width: 20rem;
+        margin: 0;
+        padding: 1.4rem;
+        position: relative;
+        left: 1rem;
+        cursor: pointer;
+      }
+      .ques {
+        width: 20rem;
+        background-color: #dddcdc;
+      }
+      pre {
+        position: relative;
+        left: 2rem;
+      }
+      .ques p {
+        text-align: center;
+      }
+    </style>
+      <link rel="stylesheet" href="./quiz.css" />
+      <script src="../app.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="navUl">
+        <li><a href="../index.html#intro">Intro</a></li>
+        <li><a href="../index.html#data-types">Data Types</a></li>
+        <li><a href="../index.html#Variables">Variables</a></li>
+        <li><a href="../index.html#loops">loop</a></li>
+        <li><a href="../index.html#array">Array</a></li>
+        <li><a href="../index.html#string">String</a></li>
+        <li><a href="../index.html#function">function</a></li>
+        <li><a href="../index.html#operator">Operators</a></li>
+        <li><a href="../index.html#pointer">Pointers</a></li>
+        <li><a href="../index.html#structures">Structures</a></li>
+        <li><a href="../index.html#unions">Unions</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-button">
+      <span class="toggle-button-bar"></span>
+      <span class="toggle-button-bar"></span>
+      <span class="toggle-button-bar"></span>
+    </button>
+    <h1>Union Quiz</h1>
+    <!-- <i class="fas fa-sad-tear" style="font-size: 48px; color: red"></i> -->
+    <div class="container">
+      <div class="question 1">
+        <div class="ques">
+          <p>1.The size of a union is determined by the size of the</p>
+        </div>
+        <div class="options">
+          <p id="wrong">First member in the union+</p>
+          <p id="wrong">Last member in the union</p>
+          <p id="right">Biggest member in the union</p>
+          <p id="wrong">Sum of the sizes of all members</p>
+        </div>
+      </div>
+      <div class="question 2">
+        <div class="ques">
+            <p>Which member of the union will be active after REF LINE in the following C code?</p><br>
+          <pre>
+2.#include <stdio.h>
+union temp
+{
+int a;
+float b;
+char c;
+};
+union temp s = {1,2.5,’A’}; </pre
+          >
+        </div>
+        <div class="options">
+          <p id="right">a</p>
+          <p id="wrong">b</p>
+          <p id="wrong">c</p>
+          <p id="wrong">Such declaration are illegal</p>
+        </div>
+      </div>
+      <div class="question 1">
+        <div class="ques">
+            <p>What would be the size of the following union declaration? (Assuming size of double = 8, size of int = 4, size of char = 1)</p><br>
+          <pre>
+3.#include &lt;stdio.h>
+union uTemp
+{
+double a;
+int b[10];
+char c;
+}u;
+          </pre>
+        </div>
+        <div class="options">
+          <p id="wrong">8</p>
+          <p id="wrong">4</p>
+          <p id="right">40</p>
+          <p id="wrong">80</p>
+        </div>
+      </div>
+      <div class="question 1">
+        <div class="ques">
+          <p>
+            4.&nbsp;Members of a union are accessed as
+          </p>
+        </div>
+        <div class="options">
+          <p id="wrong">union-name.member</p>
+          <p id="wrong">union-pointer->member</p>
+          <p id="right">Both</p>
+          <p id="wrong">none</p>
+        </div>
+      </div>
+      <div class="question 1">
+        <div class="ques">
+          <p>5. &nbsp; What will be the output of the following C code (Assuming size of int and float is 4)?</p><br>
+          <pre>
+#include <stdio.h>
+union
+{
+int ival;
+float fval;
+} u;
+void main()
+{
+printf("%d", sizeof(u));
+}</pre>
+        </div>
+        <div class="options">
+          <p id="wrong">16</p>
+          <p id="wrong">8</p>
+          <p id="right">4</p>
+          <p id="wrong">32</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-79aa48fd-60ff-4c34-b455-a86a1185ca62"></div>
+
+    <div class="backdrop"></div>
+  </body>
+</html>
+<script>
+  const answer1 = document.querySelectorAll('.options p');
+  let i;
+  for (i = 0; i < answer1.length; i++) {
+    answer1[i].addEventListener('click', function dhaya() {
+      if (this.id == 'wrong') {
+        this.textContent += '✘';
+        this.id = 'marked';
+        this.style.color = 'red';
+        this.style.opacity = 0.5;
+      } else if (this.id == 'right') {
+        this.textContent += '✔';
+        this.id = 'corrected';
+        this.style.color = 'green';
+        const parent = this.parentNode;
+
+        const children = parent.querySelectorAll('p');
+        for (let j = 0; j < children.length; j++) {
+          if (children[j].id !== 'corrected') {
+            children[j].style.opacity = 0.5;
+          }
+        }
+      }
+    });
+  }
+</script>

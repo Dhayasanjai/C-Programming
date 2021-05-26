@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: 'Merienda', cursive; */
+  /* text-shadow: 2px 2px 5px; */
+  letter-spacing: 1.2px;
+  word-spacing: 5px;
+}
+.toggle-button {
+  width: 2rem;
+
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+  cursor: pointer;
+}
+.toggle-button-bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  margin-top: 0.6rem;
+}
+button {
+  top: 0.5rem;
+
+  left: 1rem;
+
+  position: fixed;
+}
+nav {
+  display: none;
+  position: fixed;
+  background-color: white;
+  z-index: 101;
+  font-family: 'Merienda', cursive;
+  text-shadow: 2px 2px 5px;
+  width: 70vw;
+  height: 100vh;
+}
+
+.backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s linear;
+}
+@media (min-width: 600px) {
+  nav {
+    width: 50vw;
+  }
+}
+.navUl {
+  height: 100vh;
+
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+.navUl li {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.navUl li a {
+  text-decoration: none;
+  color: black;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.branches {
+  margin: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  text-shadow: 2px 2px 5px;
+  position: relative;
+  margin-bottom: 3rem;
+}
+p,
+pre {
+  line-height: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+/* li {
+  list-style-type: none;
+} */
+h3 {
+  text-shadow: 2px 2px 5px;
+}
+.example,
+.output {
+  width: 25rem;
+  background-color: #dddcdc;
+  padding: 1rem;
+}
+.points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  p,
+  pre {
+    font-size: 0.8rem;
+  }
+
+  .example,
+  .output {
+    width: 20rem;
+    background-color: #dddcdc;
+    padding: 1rem;
+  }
+}
+.programs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.quiz {
+  padding: 1rem;
+
+  background-color: black;
+  color: white;
+
+  border-radius: 2rem;
+  border: 2px solid black;
+}
+.quiz a {
+  text-align: center;
+
+  text-shadow: 2px 2px 5px;
+}
+a {
+  font-family: 'Merienda', cursive;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.quiz:hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+li {
+  list-style: none;
+}
